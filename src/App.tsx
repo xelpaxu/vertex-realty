@@ -5,11 +5,13 @@ import Footer from './components/layout/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
 import Properties from './pages/Properties';
-import PropertyDetail from './pages/PropertyDetail'; // 1. Import your new page
+import PropertyDetail from './pages/PropertyDetail';
+import CustomCursor from './components/CustomCursor';
 
 export default function App() {
   return (
     <Router>
+        <CustomCursor />
       <div className="min-h-screen bg-navy text-offwhite font-sans">
         <Navbar />
         <AnimatePresence mode="wait">
@@ -17,7 +19,7 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/properties" element={<Properties />} />
-            
+
             <Route path="/properties/:id" element={<PropertyDetail />} />
             
           </Routes>
