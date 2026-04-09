@@ -117,7 +117,7 @@ export default function Home() {
             We're Built<br/><em className="text-gold not-italic">to be Different.</em>
           </motion.h1>
           <motion.p initial={{opacity:0,y:20}} animate={{opacity:1,y:0}} transition={{delay:0.55,duration:0.8}} className="max-w-[440px] text-sm leading-relaxed text-slate-custom">
-            Premier property advisory for discerning buyers and tenants. Curated listings across Metro Manila, Cebu, and beyond.
+            Premier property advisory for discerning buyers and tenants. Curated listings across Panay.
           </motion.p>
         </div>
         {/* Scroll Indicator */}

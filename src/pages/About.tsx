@@ -53,9 +53,24 @@ const stats = [
 ];
 
 const ethosCards = [
-  { num: '03', title: 'Trust Built in Threes', body: 'Three commitments define every client relationship: transparency in valuation, honesty in disclosure, and loyalty in execution. We don\'t select two. We don\'t approximate. All three, always.', pills: ['Full Transparency', 'Complete Disclosure', 'Client Loyalty'] },
-  { num: '05', title: 'Five Senses of Quality', body: 'We evaluate every property against five sensory criteria: sight, touch, silence, air, and peace. We don\'t just sell square footage — we sell the felt experience of coming home.', pills: ['Architectural Audit', 'Material Quality', 'Acoustic Review'] },
-  { num: '07', title: 'Seven Steps to Closing', body: 'Our proprietary closing process runs seven meticulously designed stages — from discovery consultation to post-move support. No step skipped. No detail assumed.', pills: ['Discovery', 'Matching', 'Due Diligence', 'Legal Review', 'Post-Move'] },
+  { 
+    num: '03', 
+    title: 'Trust with All Your Heart', 
+    body: 'Rooted in Verse 5, we believe true partnership begins with wholehearted trust. We lean not on our own understanding or market trends alone, but on a foundation of absolute transparency and integrity that ensures your peace of mind is never compromised.', 
+    pills: ['Proverbs 3:5', 'Wholehearted Trust', 'Market Integrity'] 
+  },
+  { 
+    num: '05', 
+    title: 'Straight Paths in All Ways', 
+    body: 'Guided by Verse 6, we acknowledge a higher standard in every transaction. Our mission is to make your real estate journey "straight"—removing the crooked complexities of buying and selling through divine diligence and a commitment to honest, clear-cut pathways.', 
+    pills: ['Proverbs 3:6', 'Submission to Excellence', 'Clear Pathways'] 
+  },
+  { 
+    num: '07', 
+    title: 'Wisdom Beyond the Surface', 
+    body: 'Reflecting Verse 7, we refuse to be wise in our own eyes. We approach every property in Iloilo and beyond with humility and a "fear of the Lord," shunning unethical shortcuts to ensure our precision and service honor the community and the Creator.', 
+    pills: ['Proverbs 3:7', 'Humble Expertise', 'Ethical Stewardship'] 
+  },
 ];
 
 const team = [
@@ -163,7 +178,7 @@ export default function About() {
                 The inception of Vertex 3:5-7 Realty was driven by the desire to create a real estate agency that would not only provide top-notch services to its clients but also prioritize the well-being and professional growth of its agents.
             </motion.p>
             <motion.p initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} viewport={{once:true}} transition={{delay:0.3}} className="text-[15px] leading-relaxed text-slate-custom">
-                The name “Vertex 3:5-7 Realty” was chosen to reflect the company’s core values and beliefs. From its early days, Vertex 3:5-7 Realty set out to establish a strong foothold in the real estate market. With a focus on Iloilo, Roxas, Bacolod, and Guimaras, the company aimed to become a trusted and reliable partner for buyers, sellers, and developers in these areas.            </motion.p>
+                The name “Vertex 3:5-7 Realty” was chosen to reflect the company’s core values and beliefs. From its early days, Vertex 3:5-7 Realty set out to establish a strong foothold in the real estate market. With a focus on Iloilo, Roxas, Bacolod, and Guimaras, the company aimed to become a trusted and reliable partner for buyers, sellers, and developers in these areas.</motion.p>
             <motion.div initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} viewport={{once:true}} transition={{delay:0.4}} className="mt-8 w-full h-80 overflow-hidden border border-gold/10">
               <img src={GroupPhoto1} alt="Architectural marble detail" className="w-full h-full object-cover" loading="lazy" />
             </motion.div>

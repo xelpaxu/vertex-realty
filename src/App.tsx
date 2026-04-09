@@ -5,6 +5,7 @@ import Footer from './components/layout/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
 import Properties from './pages/Properties';
+import PropertyDetail from './pages/PropertyDetail'; // 1. Import your new page
 
 export default function App() {
   return (
@@ -16,6 +17,9 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/properties" element={<Properties />} />
+            
+            <Route path="/properties/:id" element={<PropertyDetail />} />
+            
           </Routes>
         </AnimatePresence>
         <Footer />

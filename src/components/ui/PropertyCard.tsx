@@ -41,7 +41,7 @@ export default function PropertyCard({ p, index = 0 }: { p: Property, index?: nu
       </div>
       <div className="px-5 py-3 border-t border-gold/5 flex justify-between items-center">
         <span className="text-[8px] tracking-[0.2em] uppercase font-semibold px-2.5 py-1 border border-gold/20 text-gold">{p.type}</span>
-        <a href="#" className="text-[9px] tracking-[0.2em] uppercase font-semibold text-slate-custom hover:text-gold transition-colors flex items-center gap-1.5">
+        <a href={`/properties/${p.id}`} className="text-[9px] tracking-[0.2em] uppercase font-semibold text-slate-custom hover:text-gold transition-colors flex items-center gap-1.5">
           Details <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
       </div>
