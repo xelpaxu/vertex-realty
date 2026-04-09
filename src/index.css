@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { box-sizing: border-box; }
+body { 
+  background-color: #080F1C; 
+  color: #EAE8E1; 
+  overflow-x: hidden; 
+  font-family: 'Instrument Sans', sans-serif;
+}
+html { scroll-behavior: smooth; }
+
+/* Custom Cursor (Hidden on touch devices) */
+.cursor-dot, .cursor-ring {
+  position: fixed; top: 0; left: 0;
+  border-radius: 50%; pointer-events: none; z-index: 9999;
+  transform: translate(-50%, -50%);
+}
+.cursor-dot { width: 6px; height: 6px; background: #C9A84C; }
+.cursor-ring { 
+  width: 36px; height: 36px; 
+  border: 1px solid rgba(201,168,76,0.4); 
+  transition: width 0.25s, height 0.25s, background 0.2s, border-color 0.2s; 
+}
+.cursor-hover .cursor-ring { 
+  width: 56px; height: 56px; 
+  background: rgba(201,168,76,0.06); 
+  border-color: #C9A84C; 
+}
+@media (hover: none) {
+  .cursor-dot, .cursor-ring { display: none; }
+  body { cursor: auto; }
+} else {
+  body { cursor: none; }
+  a, button, select, input, textarea { cursor: none; }
+}
