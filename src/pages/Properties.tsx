@@ -2,6 +2,7 @@ import { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import PropertyCard from '../components/ui/PropertyCard';
 import { propertiesData } from '../data/properties';
+import listingImage from '../../assets/heroImage.png';
 
 export default function Properties() {
   const [mode, setMode] = useState<'buy' | 'rent'>('buy');
@@ -32,7 +33,7 @@ export default function Properties() {
     <div>
       {/* HERO */}
       <header className="h-[40vh] min-h-[320px] relative flex items-end px-6 md:px-10 pb-14">
-        <div className="absolute inset-0 bg-cover" style={{backgroundImage: 'url(https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1920&q=80)'}}>
+        <div className="absolute inset-0 bg-cover" style={{backgroundImage: `url(${listingImage})`}}>
           <div className="absolute inset-0 bg-gradient-to-b from-navy/35 via-navy/55 to-navy"></div>
         </div>
         <div className="relative z-[2] max-w-[900px]">

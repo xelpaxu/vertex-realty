@@ -173,7 +173,6 @@ export default function Home() {
         </div>
       </section>
 
-      // --- RECOMMENDED PROPERTIES (CAROUSEL) ---
     <section id="properties-section" className="py-24 px-6 md:px-10 bg-navy-mid border-t border-gold/5 relative z-20 overflow-hidden">
     <div className="max-w-[1300px] mx-auto">
         
