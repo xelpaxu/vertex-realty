@@ -5,6 +5,8 @@ import HeroPhoto from '../../assets/group1.jpg';
 import GroupPhoto1 from '../../assets/group2.jpg';
 import founder1 from '../../assets/founderImage.jpg';
 import founder2 from '../../assets/founderImage2.jpg';
+import leaImage from '../../assets/lea-redgarnet.png';
+import emeraldSD from '../../assets/sales_director-emerald.png';
 
 // --- Typed Particle Canvas (Identical to Home.tsx) ---
 class Particle {
@@ -73,11 +75,11 @@ const ethosCards = [
   },
 ];
 
-const team = [
-  { name: 'John Doe', role: 'Founder & CEO', bio: '15+ years in investment analysis and real estate advisory. Founded Vertex on the principle that property transactions deserve institutional-grade rigor.', since: 'Since 2010', img: `${founder1}` },
-  { name: 'John Doe', role: 'Chief Operating Officer', bio: 'Former architect turned operations executive. Applies structural thinking to every process and transaction within the firm.', since: 'Since 2012', img: `${founder2}` },
-  { name: 'John Doe', role: 'Head of Advisory', bio: 'Investment banking background with 12 years in property finance. Every number he presents is airtight. Every projection, conservative.', since: 'Since 2013', img: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80&crop=face&h=600' },
-  { name: 'John Doe', role: 'Legal Director', bio: 'UP Law graduate. Every contract she drafts is airtight. Every title transfer, bulletproof. Clients sleep well because of Sofia.', since: 'Since 2014', img: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80&crop=face&h=600' },
+const sales_director = [
+  { name: 'Lea Morancil', team: 'Red Garnet', bio: '15+ years in investment analysis and real estate advisory. Founded Vertex on the principle that property transactions deserve institutional-grade rigor.', since: 'Since 2010', img: `${leaImage}` },
+  { name: 'John Doe', team: 'Red Garnet', bio: 'Former architect turned operations executive. Applies structural thinking to every process and transaction within the firm.', since: 'Since 2012', img: `${founder2}` },
+  { name: 'John Doe', team: 'Red Garnet', bio: 'Investment banking background with 12 years in property finance. Every number he presents is airtight. Every projection, conservative.', since: 'Since 2013', img: `${emeraldSD}` },
+  { name: 'John Doe', team: 'Red Garnet', bio: 'UP Law graduate. Every contract she drafts is airtight. Every title transfer, bulletproof. Clients sleep well because of Sofia.', since: 'Since 2014', img: `${emeraldSD}` },
 ];
 
 const agentDetails = [
@@ -153,17 +155,45 @@ export default function About() {
         </div>
       </header>
 
-      {/* STATS BAR */}
-      <div className="grid grid-cols-2 md:grid-cols-4 bg-navy-light border-y border-gold/10">
-        {stats.map((s, i) => (
-          <motion.div key={s.sub} initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} viewport={{once:true}} transition={{delay:i*0.1}} className="p-8 border-r border-gold/10 last:border-r-0">
-            <div className="text-[clamp(36px,4vw,56px)] font-bold italic text-offwhite leading-none mb-1.5">
-              {s.num}{s.sup && <sup className="text-[0.4em] align-top mt-2 text-gold ml-0.5">{s.sup}</sup>}
+    {/* STATS BAR */}
+    <div className="grid grid-cols-2 lg:grid-cols-4 bg-navy-dark border-y border-gold/20 overflow-hidden">
+    {stats.map((s, i) => (
+        <motion.div 
+        key={s.sub} 
+        initial={{ opacity: 0, y: 20 }} 
+        whileInView={{ opacity: 1, y: 0 }} 
+        viewport={{ once: true }} 
+        transition={{ delay: i * 0.1, duration: 0.8, ease: "easeOut" }}
+        className="relative p-10 group border-r border-gold/10 last:border-r-0 hover:bg-gold/[0.02] transition-colors"
+        >
+        {/* Subtle Glow Effect */}
+        <div className="absolute inset-0 bg-gradient-to-b from-gold/[0.05] to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+        
+        {/* Top Accent Line */}
+        <div className="absolute top-0 left-0 w-0 h-[2px] bg-gold group-hover:w-full transition-all duration-500" />
+
+        <div className="relative z-10">
+            <div className="flex items-baseline gap-1 mb-2">
+            <span className="text-5xl md:text-6xl font-bold italic tracking-tighter text-offwhite">
+                {s.num}
+            </span>
+            {s.sup && (
+                <span className="text-gold font-semibold text-lg self-start mt-1">
+                {s.sup}
+                </span>
+            )}
             </div>
-            <div className="text-[10px] tracking-[0.25em] uppercase text-slate-custom font-medium">{s.sub}</div>
-          </motion.div>
-        ))}
-      </div>
+            
+            <div className="flex items-center gap-3">
+            <div className="h-px w-4 bg-gold/50" />
+            <div className="text-[11px] tracking-[0.3em] uppercase text-slate-custom font-semibold">
+                {s.sub}
+            </div>
+            </div>
+        </div>
+        </motion.div>
+    ))}
+    </div>
 
       {/* ETHOS SECTION */}
       <section className="py-24 md:py-32 px-6 md:px-10 bg-navy">
@@ -217,7 +247,7 @@ export default function About() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[clamp(80px,14vw,220px)] font-bold italic text-gold/[0.03] tracking-tight whitespace-nowrap pointer-events-none select-none">Precision</div>
         <motion.blockquote initial={{opacity:0,y:30}} whileInView={{opacity:1,y:0}} viewport={{once:true}} className="relative max-w-[760px] mx-auto text-[clamp(22px,3vw,38px)] font-semibold italic leading-snug tracking-tight text-offwhite">
           "We never confuse a quick sale with a lasting legacy. At Vertex 3:5-7, we believe the homes that define lives are the ones where we <em className="text-gold not-italic">refused to rush the foundation of trust.</em>"
-          <cite className="block mt-7 text-[10px] tracking-[0.35em] uppercase not-italic font-semibold text-slate-custom">— John Doe, Founder</cite>
+          <cite className="block mt-7 text-[10px] tracking-[0.35em] uppercase not-italic font-semibold text-slate-custom">—  Jason Fuentespina, Founder</cite>
         </motion.blockquote>
       </div>
 
@@ -316,15 +346,15 @@ export default function About() {
         <div className="max-w-[1300px] mx-auto">
           <SectionHeader tag="The People" title="Sales <em>Directors</em>" />
           <div className="grid grid-cols-2 md:grid-cols-4 gap-[2px]">
-            {team.map((t, i) => (
+            {sales_director.map((t, i) => (
               <motion.div key={t.name} initial={{opacity:0,y:30}} whileInView={{opacity:1,y:0}} viewport={{once:true}} transition={{delay:i*0.1}} data-hover className="relative overflow-hidden aspect-[2/3] bg-navy-light group">
                 <div className="w-full h-full overflow-hidden transition-transform duration-500 group-hover:scale-[1.06]">
                   <img src={t.img} alt={t.name} className="w-full h-full object-cover" loading="lazy" />
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-transparent via-transparent to-navy/90 group-hover:via-navy/30 group-hover:to-navy/97 transition-all duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-navy/90 group-hover:via-navy/30 group-hover:to-navy/97 transition-all duration-300"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-6">
                   <div className="text-[17px] font-bold text-offwhite tracking-tight mb-1">{t.name}</div>
-                  <div className="text-[9px] tracking-[0.3em] uppercase text-gold font-semibold">{t.role}</div>
+                  <div className="text-[9px] tracking-[0.3em] uppercase text-gold font-semibold">{t.team}</div>
                   <div className="text-xs leading-relaxed text-offwhite/50 max-h-0 overflow-hidden transition-all duration-400 group-hover:max-h-[120px] group-hover:mt-2.5">{t.bio}</div>
                   <div className="text-[9px] text-slate-custom mt-2 tracking-wider opacity-0 group-hover:opacity-100 transition-opacity duration-300">{t.since}</div>
                 </div>

@@ -425,17 +425,17 @@ export default function Home() {
               { 
                 icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>, 
                 label: 'Main Office', 
-                value: '26th Floor, One Corporate Center,\nMeralco Ave., Ortigas Center, Pasig City' 
+                value: '2ND FLOOR ADELINA BLDG. CORNER GENERAL LUNA, \nJalandoni St, Iloilo City, 5000' 
               },
               { 
                 icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>, 
                 label: 'Email', 
-                value: 'inquire@vertex357.com' 
+                value: 'vertex0357realty@gmail.com' 
               },
               { 
                 icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .99h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>, 
                 label: 'Phone', 
-                value: '+63 2 8123 4567' 
+                value: '0917 884 8602' 
               },
             ].map((item) => (
               <div key={item.label} className="flex gap-3.5 items-start mb-5">
@@ -515,7 +515,7 @@ export default function Home() {
         <motion.div initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} viewport={{once:true}}>
           <h2 className="text-[clamp(24px,3vw,42px)] font-bold italic text-offwhite tracking-tight">Ready to find<br/><em className="text-gold not-italic">something exceptional?</em></h2>
         </motion.div>
-        <a href="/properties" className="inline-flex items-center justify-center px-8 py-3.5 bg-gold text-navy text-[10px] tracking-[0.25em] uppercase font-bold hover:bg-gold-bright transition-colors">
+        <a href="https://www.facebook.com/profile.php?id=100071329680525" target='_blank' className="inline-flex items-center justify-center px-8 py-3.5 bg-gold text-navy text-[10px] tracking-[0.25em] uppercase font-bold hover:bg-gold-bright transition-colors">
           Begin the Conversation
         </a>
       </div>
