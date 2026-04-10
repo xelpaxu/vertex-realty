@@ -215,7 +215,7 @@ export default function Home() {
     {/* CITIES (PROFESSIONAL LAYOUT) */}
     <section className="py-24 px-6 md:px-10 bg-navy border-t border-gold/5 relative z-20">
     <div className="max-w-[1300px] mx-auto">
-        <SectionHeader tag="Markets We Serve" title="Explore<br/><em>Cities</em>" />
+        <SectionHeader tag="Markets We Serve" title="Explore <em>Places we Serve</em>" />
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 h-auto lg:h-[520px]">
 
@@ -234,7 +234,7 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/50 to-transparent" />
             
             <div className="absolute bottom-0 left-0 p-8">
-            <h3 className="text-3xl font-bold italic text-offwhite mb-2">Makati City</h3>
+            <h3 className="text-3xl font-bold italic text-offwhite mb-2">Bacolod</h3>
             <div className="text-[11px] tracking-[0.25em] uppercase text-gold font-semibold mb-2">
                 The Financial Capital
             </div>
@@ -249,13 +249,13 @@ export default function Home() {
 
             {[
             {
-                name: 'BGC',
+                name: 'Guimaras',
                 sub: 'Bonifacio Global City',
                 count: '62 Active Listings',
                 img: 'https://images.unsplash.com/photo-1520483601560-389dff434fdf?w=600&q=80'
             },
             {
-                name: 'Cebu City',
+                name: 'Roxas',
                 sub: 'Queen City of the South',
                 count: '27 Active Listings',
                 img: 'https://images.unsplash.com/photo-1555899434-94d1368aa7af?w=600&q=80'
