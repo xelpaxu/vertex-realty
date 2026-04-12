@@ -346,11 +346,8 @@ export default function About() {
       <div className="absolute top-0 left-1/2 w-px h-full bg-gradient-to-b from-gold/20 via-transparent to-transparent hidden md:block" />
 
       <div className="max-w-[1300px] mx-auto relative z-10">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-20">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-5">
           <SectionHeader tag="The Vanguard" title="Sales <em>Directors</em>" className="mb-0" />
-          <p className="text-slate-custom text-[10px] tracking-[0.3em] uppercase font-bold hidden md:block">
-            Leading with Precision // 2026
-          </p>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4">
