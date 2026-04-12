@@ -77,8 +77,8 @@ const ethosCards = [
 
 const sales_director = [
   { name: 'Lea Morancil', team: 'Red Garnet', bio: '15+ years in investment analysis and real estate advisory. Founded Vertex on the principle that property transactions deserve institutional-grade rigor.', since: 'Since 2010', img: `${leaImage}` },
-  { name: 'John Doe', team: 'Red Garnet', bio: 'Former architect turned operations executive. Applies structural thinking to every process and transaction within the firm.', since: 'Since 2012', img: `${founder2}` },
-  { name: 'John Doe', team: 'Red Garnet', bio: 'Investment banking background with 12 years in property finance. Every number he presents is airtight. Every projection, conservative.', since: 'Since 2013', img: `${emeraldSD}` },
+  { name: 'Annalyn Fuentespina', team: 'Founder', bio: 'Former architect turned operations executive. Applies structural thinking to every process and transaction within the firm.', since: 'Since 2012', img: `${founder2}` },
+  { name: 'Jason Fuentespina', team: 'Founder', bio: 'Investment banking background with 12 years in property finance. Every number he presents is airtight. Every projection, conservative.', since: 'Since 2013', img: `${founder1}` },
   { name: 'John Doe', team: 'Red Garnet', bio: 'UP Law graduate. Every contract she drafts is airtight. Every title transfer, bulletproof. Clients sleep well because of Sofia.', since: 'Since 2014', img: `${emeraldSD}` },
 ];
 

@@ -173,44 +173,54 @@ export default function Home() {
         </div>
       </section>
 
-    <section id="properties-section" className="py-24 px-6 md:px-10 bg-navy-mid border-t border-gold/5 relative z-20 overflow-hidden">
-    <div className="max-w-[1300px] mx-auto">
-        
-        <div className="flex flex-col md:flex-row justify-between md:items-end gap-6 mb-12">
-        <SectionHeader tag="Curated Selection" title="Recommended<br/><em>Properties</em>" className="mb-0" />
-        <a href="/properties" className="text-[10px] tracking-[0.25em] uppercase font-semibold text-slate-custom border-b border-transparent hover:text-gold hover:border-gold pb-0.5 transition-all">
-            View All Listings →
-        </a>
-        </div>
+      <section id="properties-section" className="py-24 px-6 md:px-10 bg-navy-mid border-t border-gold/5 relative z-20 overflow-hidden">
+          <div className="max-w-[1300px] mx-auto">
+              
+              <div className="flex flex-col md:flex-row justify-between md:items-end gap-6 mb-16">
+                  <SectionHeader tag="Curated Selection" title="Recommended<br/><em>Properties</em>" className="mb-0" />
+                  <a href="/properties" className="group text-[10px] tracking-[0.25em] uppercase font-semibold text-slate-custom flex items-center gap-2 hover:text-gold transition-all">
+                      View All Listings 
+                      <span className="group-hover:translate-x-1 transition-transform">→</span>
+                  </a>
+              </div>
 
-        {/* Carousel */}
-        <div className="relative w-full overflow-hidden">
-        <motion.div
-            className="flex gap-6 w-max"
-            animate={{ x: ["0%", "-50%"] }}
-            transition={{
-            repeat: Infinity,
-            duration: 35,
-            ease: "linear"
-            }}
-        >
-            {[...projects, ...projects].map((proj, i) => {
-            const props = propertiesData.filter(p => p.project === proj);
-            const recommended = props[Math.floor(Math.random() * props.length)];
+              {/* Improved Staggered Carousel */}
+              <div className="relative w-full overflow-visible">
+                  <motion.div
+                      className="flex gap-10 w-max pb-12" // Increased gap and added padding for the "drop"
+                      animate={{ x: ["0%", "-50%"] }}
+                      transition={{
+                          repeat: Infinity,
+                          duration: 40, // Slightly slower for a "drifting" premium feel
+                          ease: "linear"
+                      }}
+                  >
+                      {[...projects, ...projects].map((proj, i) => {
+                          const props = propertiesData.filter(p => p.project === proj);
+                          const recommended = props[Math.floor(Math.random() * props.length)];
 
-            if (!recommended) return null;
+                          if (!recommended) return null;
 
-            return (
-                <div key={`${proj}-${i}`} className="min-w-[280px] max-w-[280px]">
-                <PropertyCard p={recommended} index={i} />
-                </div>
-            );
-            })}
-        </motion.div>
-        </div>
+                          // Alternating vertical offset logic
+                          const isEven = i % 2 === 0;
 
-    </div>
-    </section>
+                          return (
+                              <div 
+                                  key={`${proj}-${i}`} 
+                                  className={`min-w-[320px] max-w-[320px] transition-transform duration-700 ${
+                                      isEven ? "mt-0" : "mt-16" // This creates the staggered gallery layout
+                                  }`}
+                              >
+                                  <div className={`${isEven ? "border-l border-gold/10 pl-4" : ""}`}>
+                                      <PropertyCard p={recommended} index={i} />
+                                  </div>
+                              </div>
+                          );
+                      })}
+                  </motion.div>
+              </div>
+          </div>
+      </section>
 
     {/* CITIES (PROFESSIONAL LAYOUT) */}
     <section className="py-24 px-6 md:px-10 bg-navy border-t border-gold/5 relative z-20">
@@ -409,7 +419,7 @@ export default function Home() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[clamp(80px,14vw,220px)] font-bold italic text-gold/[0.03] tracking-tight whitespace-nowrap pointer-events-none select-none">Precision</div>
         <motion.blockquote initial={{opacity:0,y:30}} whileInView={{opacity:1,y:0}} viewport={{once:true}} className="relative max-w-[760px] mx-auto text-[clamp(22px,3vw,38px)] font-semibold italic leading-snug tracking-tight text-offwhite">
           "We never confused urgency with excellence. The deals that define careers are the ones where you <em className="text-gold not-italic">refused to rush.</em>"
-          <cite className="block mt-7 text-[10px] tracking-[0.35em] uppercase not-italic font-semibold text-slate-custom">— Marcus A. Villanueva, Founder</cite>
+          <cite className="block mt-7 text-[10px] tracking-[0.35em] uppercase not-italic font-semibold text-slate-custom">— Jason Fuentespina, Founder</cite>
         </motion.blockquote>
       </div>
 
